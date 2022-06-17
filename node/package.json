@@ -1,0 +1,24 @@
+{
+  "name": "react-ssr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src",
+  "scripts": {
+    "build:client": "webpack --config ./src/web/webpack.config.js",
+    "start": "nodemon -e ts --exec ts-node ./src/server/server.entry.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/react-dom": "^18.0.5",
+    "nodemon": "^2.0.16",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.7.3"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.40"
+  }
+}
