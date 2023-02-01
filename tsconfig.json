@@ -12,9 +12,10 @@
     "moduleResolution": "Node",
     "jsx": "react-jsx",
   },
-  "include": ["./**/*", "./@type/index.d.ts" ],
+  "include": ["./**/*"],
   "exclude": [
     "node_modules",
-    "**/*.spec.ts"
+    "**/*.spec.ts",
+    "dist"
   ]
 }
