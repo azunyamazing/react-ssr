@@ -1,14 +1,20 @@
+### SSR For React
 
-### react ssr
-
-```txt
-根据项目技术栈情况(react / ts / mobx)实现的超级简易版 ssr demo，旨在实现 ssr 主要逻辑。
+```
+- index.html
+- server.js # main application server
+- src/
+  - entry-client.js  # 将应用挂载到一个 DOM 元素上
+  - entry-server.js  # 获取首屏 html 字符串
 ```
 
-### dir
+:hammer: 实现思路就是将首屏 html 代码和现有客户端代码进行直出, 因此需要在服务端先进行一遍组件渲染.
 
-```txt
-- node // 原生 node 实现的 ssr 逻辑
-- next // 使用 next 框架来实现 ssr :)
+
+```bash
+npm i
+
+npm run dev # csr
+
+npm start   # ssr
 ```
-

@@ -4,16 +4,15 @@
     "esModuleInterop": true,
     "module": "commonjs",
     "lib": ["ES2016", "DOM"],
-    "baseUrl": "by-node/src",
+    "baseUrl": ".",
+    "rootDir": ".",
     "noImplicitAny": true,
     "removeComments": true,
     "preserveConstEnums": true,
     "moduleResolution": "Node",
     "jsx": "react-jsx",
   },
-  "include": [
-    "./**/*"
-  ],
+  "include": ["./**/*", "./@type/index.d.ts" ],
   "exclude": [
     "node_modules",
     "**/*.spec.ts"
