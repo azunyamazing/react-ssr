@@ -1,12 +1,13 @@
 import { readFileSync } from 'fs-extra';
 import chalk from 'chalk';
+import { build as viteBuild } from 'vite'
+
 import { createServer } from 'http';
 import { spawn } from 'child_process';
 import { resolve } from 'path';
-import { build as viteBuild } from 'vite'
 import { render as renderServerHtml } from './src/entry-server';
 
-const port = 2333;
+const PORT = 2333;
 
 // 利用 vite 打包客户端代码
 // 这里只利用了 vite 的打包工具, vite 支持 ssr, 可以参考: https://cn.vitejs.dev/guide/ssr.html
@@ -47,10 +48,10 @@ const buildClientJS = async () => {
         res.write(template);
         res.end();
       } catch (e) {
-        console.log(e);
+        console.log('Error', e);
       }
     }
   })
-    .listen(port, () => console.log(`\n  ${chalk.greenBright('➜')}  Local:   ${chalk.cyan('http://127.0.0.1:2333/')} \n`))
+    .listen(PORT, () => console.log(`\n  ${chalk.greenBright('➜')}  Local:   ${chalk.cyan(`http://127.0.0.1:${PORT}/`)} \n`));
 })();
 
